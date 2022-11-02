@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Index</title>
+</head>
+
+<body style="background-color:#D7FEED;">
+  <h1>Login</h1>
+  <div>
+    <h3>Using email&password:</h3>
+    <form>
+        <label for="email">Email</label>
+        <input type="text" id="email" disabled />
+        <label for="password">Password</label>
+        <input type="password" id="password" disabled />
+        <input type="Submit" value="Login" disabled />
+    </form>
+  </div>
+  <br />
+  <hr />
+  <div>
+    <h3>Or:</h3>
+    <a href="http://localhost:8090/oauth/authorize?client_id=1&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fcallback&scope=admin&response_type=code">Sign-in with XYZ</a>
+  </div>
+</body>
+</html>

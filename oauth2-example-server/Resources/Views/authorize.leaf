@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Authorize!</title>
+        <meta charset="UTF-8">
+    </head>
+    <body style="background-color:#FEEAE9;">
+        <h1>Sign-in with XYZ!</h1>
+        <hr />
+        <p>Client with id '#(clientID)' wants to access your XYZ account</p>
+        <h4>Client is requesting the following scopes:</h4>
+        <ul>
+        #for(scope in scopes):
+            <li>#(scope)</li>
+        #endfor
+        </ul>
+        <form action="http://localhost:8090/oauth/authorize?client_id=1&redirect_uri=http://localhost:8080/callback&response_type=code&scope=admin" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="applicationAuthorized" value="true" />
+            <input type="hidden" name="csrfToken" value="#(csrfToken)" />
+            <input type="submit" value="Allow" />
+        </form>
+
+        <br />
+        <form action="http://localhost:8090/oauth/authorize?client_id=1&redirect_uri=http://localhost:8080/callback&response_type=code&scope=admin" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="applicationAuthorized" value="false" />
+            <input type="hidden" name="csrfToken" value="#(csrfToken)" />
+            <input type="submit" value="Cancel" />
+        </form>
+    </body>
+
+    <!-- <script>
+    function authorize(granted) {
+        const url = '';
+        const formData  = new FormData();
+        formData.append("applicationAuthorized", granted);
+        formData.append("csrfToken", "");
+        const otherParam = {
+            headers: { "Authorization": "Bearer authorize_me" },
+            body: formData,
+            method: "POST"
+        };
+        fetch(url, otherParam)
+            .then((response) => response.json())
+            .then((data) => console.log(data));
+    }
+    </script> -->
+</html>

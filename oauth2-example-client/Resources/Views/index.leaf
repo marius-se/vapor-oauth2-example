@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Index</title>
+</head>
+
+<body style="background-color:#D7FEED;">
+  <h1>Index</h1>
+  <h3>Welcome!</h3>
+  <br />
+  <a href="http://localhost:8080/login">Login</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>We did it!</title>
+</head>
+
+<body style="background-color:#D7FEED;">
+  <h1>We did it!</h1>
+  <p>Congratulations - we managed to get refresh& access token!</p>
+  <br />
+  <p>Access token (valid for #(expiryInMinutes / 60)min.): #(accessToken)</p>
+  <p>Refresh token: #(refreshToken)</p>
+  <br />
+  <p>The tokens are valid for the following scopes: #(scope)</p>
+</body>
+</html>
